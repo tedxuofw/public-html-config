@@ -1,0 +1,6 @@
+# Serve website files from the 'main' subfolder.
+# Leaves all subdomains alone.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www.)?tedxuofw.com$
+RewriteCond %{REQUEST_URI} !^/main/
+RewriteRule ^(.*)$ /main/$1
